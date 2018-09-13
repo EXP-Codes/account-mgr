@@ -41,7 +41,7 @@
 
 ## 下载
 
-- [Account-Manager-1.0.zip](https://raw.githubusercontent.com/lyy289065406/expcodes/master/java/99-project/account-mgr/release/%E5%B8%90%E5%AF%86%E7%AE%A1%E7%90%86%E5%99%A8-v1.0.zip) *(build on 2017-08-12 by EXP)*
+- [Account-Manager-1.0.zip](https://github-production-release-asset-2e65be.s3.amazonaws.com/148517147/7bdf5e80-b7b5-11e8-8bd8-d53f435d159b?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20180913%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20180913T163445Z&X-Amz-Expires=300&X-Amz-Signature=0f59f460c733dbe5c477f23ae9ee342c2647ded00a06b8850cbcfdb838e61ae9&X-Amz-SignedHeaders=host&actor_id=17040287&response-content-disposition=attachment%3B%20filename%3Daccount-mgr-v1.0.zip&response-content-type=application%2Foctet-stream) *(build on 2017-08-12 by EXP)*
 
 ## 安装与使用
 
