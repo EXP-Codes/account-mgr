@@ -6,12 +6,12 @@
 	<!--项目基本信息(必填)-->
 	<groupId>com.catt</groupId>
 	<artifactId>account-mgr</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>帐密管理器</name>
 	<description>管理个人帐密信息（信息加密、不联网）</description>
-	<url>https://github.com/lyy289065406/expcodes/trunk/java/99-project/account-mgr</url>
+	<url>https://github.com/lyy289065406/account-mgr</url>
 	<inceptionYear>2017-07-11</inceptionYear>
 
 	<!--项目的问题管理系统(可选)-->
@@ -23,23 +23,23 @@
 	<!--项目的问题追踪系统(可选)-->
 	<ciManagement>
 		<system>jenkins</system>
-		<url>http://172.168.10.100:8080/jenkins/</url>
+		<url>http://127.0.0.1:8080/jenkins/</url>
 	</ciManagement>
 	
 	<!-- 软件配置管理 -->
 	<scm>
 		<!-- 项目SVN主干目录（需保证目录已存在） -->
-		<connection>scm:svn:https://github.com/lyy289065406/expcodes/trunk/java/99-project/account-mgr/trunk</connection>
-		<developerConnection>scm:svn:https://github.com/lyy289065406/expcodes/trunk/java/99-project/account-mgr/trunk</developerConnection>
-		<url>scm:svn:https://github.com/lyy289065406/expcodes/trunk/java/99-project/account-mgr/trunk</url>
+		<connection>scm:svn:https://github.com/lyy289065406/account-mgr/trunk</connection>
+		<developerConnection>scm:svn:https://github.com/lyy289065406/account-mgr/trunk</developerConnection>
+		<url>scm:svn:https://github.com/lyy289065406/account-mgr/trunk</url>
 	</scm>
 
 	<!-- 变量定义 -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<release.dir>${project.build.directory}/${project.artifactId}-${project.version}</release.dir>
-		<explibs.version>1.0-SNAPSHOT</explibs.version>
-		<mrp.plugin.version>1.0-SNAPSHOT</mrp.plugin.version>
+		<explibs.version>1.0</explibs.version>
+		<mrp.plugin.version>1.0</mrp.plugin.version>
 	</properties>
 
 	<!-- 项目依赖 -->
@@ -48,102 +48,8 @@
 		<!-- 经验库 -->
     	<dependency>
           <groupId>exp.libs</groupId>
-          <artifactId>exp-libs-base</artifactId>
+          <artifactId>exp-libs-simple</artifactId>
           <version>${explibs.version}</version>
-          <exclusions>
-            <exclusion>
-              <groupId>org.dom4j</groupId>
-              <artifactId>dom4j</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>net.sf.json-lib</groupId>
-              <artifactId>json-lib</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.codehaus.jackson</groupId>
-              <artifactId>jackson-xc</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.codehaus.jackson</groupId>
-              <artifactId>jackson-smile</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.codehaus.jackson</groupId>
-              <artifactId>jackson-mrbean</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.codehaus.jackson</groupId>
-              <artifactId>jackson-jaxrs</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.codehaus.jackson</groupId>
-              <artifactId>jackson-core-lgpl</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.codehaus.jackson</groupId>
-              <artifactId>jackson-mapper-lgpl</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.apache.xmlbeans</groupId>
-              <artifactId>xmlbeans</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.apache</groupId>
-              <artifactId>log4j</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>ch.qos.logback</groupId>
-              <artifactId>logback-core</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>ch.qos.logback</groupId>
-              <artifactId>logback-classic</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>ch.qos.logback</groupId>
-              <artifactId>logback-access</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>com.google.zxing</groupId>
-              <artifactId>javase</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>com.google.zxing</groupId>
-              <artifactId>core</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.dtools</groupId>
-              <artifactId>javaini</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.bouncycastle</groupId>
-              <artifactId>bcprov-jdk15on</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>sun.misc</groupId>
-              <artifactId>base64</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.bouncycastle</groupId>
-              <artifactId>bcprov-jdk15on</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>commons-httpclient</groupId>
-              <artifactId>commons-httpclient</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>commons-net</groupId>
-              <artifactId>commons-net</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>org.apache.commons</groupId>
-              <artifactId>commons-compress</artifactId>
-            </exclusion>
-            <exclusion>
-              <groupId>commons-codec</groupId>
-              <artifactId>commons-codec</artifactId>
-            </exclusion>
-          </exclusions>
         </dependency>
 
 		<!-- 单元测试 -->
@@ -169,7 +75,7 @@
 				<version>2.3.2</version>
 				<configuration>
 					<!-- 项目的SVN基线目录（需保证目录已存在） -->
-					<tagBase>https://github.com/lyy289065406/expcodes/trunk/java/99-project/account-mgr/tags</tagBase>
+					<tagBase>https://github.com/lyy289065406/account-mgr/tags</tagBase>
 				</configuration>
 			</plugin>
 
