@@ -38,7 +38,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<release.dir>${project.build.directory}/${project.artifactId}-${project.version}</release.dir>
-		<explibs.version>1.0</explibs.version>
+		<jdk.version>1.8</jdk.version>
+		<explibs.version>1.2-SNAPSHOT</explibs.version>
 		<mrp.plugin.version>1.0</mrp.plugin.version>
 	</properties>
 
@@ -65,6 +66,16 @@
 	<!-- 项目构建 -->
 	<build>
 		<plugins>
+		
+			<!-- 指定项目JDK版本 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>${jdk.version}</source>
+                    <target>${jdk.version}</target>
+                </configuration>
+            </plugin>
 
 			<!-- 版本打包插件，在dos跳转到项目根目录，依次执行（需保证没有引用快照、本地与SVN服务器内容完全一致）: 
 				1 发布基线到svn: mvn release:prepare 
@@ -72,7 +83,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.3.2</version>
 				<configuration>
 					<!-- 项目的SVN基线目录（需保证目录已存在） -->
 					<tagBase>https://github.com/lyy289065406/account-mgr/tags</tagBase>
@@ -83,7 +93,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.7.2</version>
 				<configuration>
 					<!-- 解决控制台输出乱码问题 -->
 					<forkMode>once</forkMode>
@@ -103,7 +112,6 @@
 			<plugin>
 				<groupId>com.github.wvengen</groupId>
 				<artifactId>proguard-maven-plugin</artifactId>
-				<version>2.0.7</version>
 				<executions>
 					<execution>
 						<phase>package</phase>	<!-- 触发混淆打包的maven周期 -->
@@ -226,7 +234,6 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-antrun-plugin</artifactId>
-				<version>1.7</version>
 				<executions>
 					<execution>
 						<id>ant-build</id>
@@ -281,20 +288,33 @@
 				</executions>
 			</plugin -->
 
-			<!-- 打包javadoc: 项目发布基线版本时会自动打包javadoc，不要启用此插件，否则会失败 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>2.9.1</version>
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+			<!-- 打包javadoc: 项目发布基线版本时会自动打包javadoc，若报错不要启用此插件 -->
+            <!-- javadoc插件会强制使用GBK读取pom文件的内容, 若得到的html网页标题乱码,  -->
+            <!-- 则需要通过Run Configurations -> 自定义Maven install命令 -> Common -> Encoding:GBK 确保不会乱码 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <aggregate>true</aggregate>
+                    <charset>UTF-8</charset>
+                    <encoding>UTF-8</encoding>
+                    <docencoding>UTF-8</docencoding>
+                    
+                    <!-- 从JDK8开始, Javadoc中添加了doclint, 目的是旨在获得符合W3C HTML 4.01标准规范的HTML文档 -->
+                    <!-- 简而言之Javadoc不允许出现html相关的元素, 若旧注释含有这些元素又不想修改, 只能关闭doclint -->
+                    <additionalOptions>
+                        <additionalOption>-Xdoclint:none</additionalOption>
+                    </additionalOptions>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
 		</plugins>
 	</build>
