@@ -33,10 +33,10 @@
       
 ## 运行展示
 
-- 首次运行需要注册（*仅在本地注册，不联网*），相当于生成一个保护所有帐密的口令：<br/><br/>![本地注册](https://github.com/lyy289065406/account-mgr/master/doc/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE/01-%E6%9C%AC%E5%9C%B0%E6%B3%A8%E5%86%8C.png)<br/><br/><br/>
-- 登陆成功后，可查看所有已录入的帐密列表：<br/><br/>![主界面](https://github.com/lyy289065406/account-mgr/master/doc/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE/02-%E4%B8%BB%E7%95%8C%E9%9D%A2.png)<br/><br/><br/>
-- 通过搜索功能快速找到已录入的目标帐密：<br/><br/>![搜索界面](https://github.com/lyy289065406/account-mgr/master/doc/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE/03-%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C.png)<br/><br/><br/>
-- 右击目标条目查看帐密详情：<br/><br/>![查看详情](https://github.com/lyy289065406/account-mgr/master/doc/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE/04-%E6%9F%A5%E7%9C%8B%E8%AF%A6%E6%83%85.png)<br/><br/><br/>
+- 首次运行需要注册（*仅在本地注册，不联网*），相当于生成一个保护所有帐密的口令：<br/><br/>![本地注册](https://github.com/lyy289065406/account-mgr/blob/master/doc/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE/01-%E6%9C%AC%E5%9C%B0%E6%B3%A8%E5%86%8C.png)<br/><br/><br/>
+- 登陆成功后，可查看所有已录入的帐密列表：<br/><br/>![主界面](https://github.com/lyy289065406/account-mgr/blob/master/doc/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE/02-%E4%B8%BB%E7%95%8C%E9%9D%A2.png)<br/><br/><br/>
+- 通过搜索功能快速找到已录入的目标帐密：<br/><br/>![搜索界面](https://github.com/lyy289065406/account-mgr/blob/master/doc/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE/03-%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C.png)<br/><br/><br/>
+- 右击目标条目查看帐密详情：<br/><br/>![查看详情](https://github.com/lyy289065406/account-mgr/blob/master/doc/%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE/04-%E6%9F%A5%E7%9C%8B%E8%AF%A6%E6%83%85.png)<br/><br/><br/>
 
 
 ## 下载
