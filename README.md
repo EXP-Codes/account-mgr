@@ -6,7 +6,7 @@
 
 ## 运行环境
 
-　![](https://img.shields.io/badge/Platform-Windows%20x64-brightgreen.svg)  ![](https://img.shields.io/badge/JDK-1.6%2B-brightgreen.svg)
+　![](https://img.shields.io/badge/Platform-WinXP%20x64-brightgreen.svg)　![](https://img.shields.io/badge/Platform-Win7%20x64-brightgreen.svg)　　![](https://img.shields.io/badge/Platform-Win8%20x64-brightgreen.svg)　![](https://img.shields.io/badge/JDK-1.8%2B-brightgreen.svg)
 
 
 ## 软件介绍
