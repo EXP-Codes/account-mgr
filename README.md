@@ -6,7 +6,7 @@
 
 ## 运行环境
 
-　![](https://img.shields.io/badge/Platform-WinXP%20x64-brightgreen.svg)　![](https://img.shields.io/badge/Platform-Win7%20x64-brightgreen.svg)　　![](https://img.shields.io/badge/Platform-Win8%20x64-brightgreen.svg)　![](https://img.shields.io/badge/JDK-1.8%2B-brightgreen.svg)
+　![](https://img.shields.io/badge/Platform-WinXP%20x64-brightgreen.svg)  ![](https://img.shields.io/badge/Platform-Win7%20x64-brightgreen.svg)  ![](https://img.shields.io/badge/Platform-Win8%20x64-brightgreen.svg)  ![](https://img.shields.io/badge/JDK-1.8%2B-brightgreen.svg)
 
 
 ## 软件介绍
@@ -45,7 +45,7 @@
 
 ## 安装与使用
 
-- 01.　安装JDK环境【[jdk-6u43-windows-x64.exe](https://lyy289065406.github.io/environment/environment/java/JDK/windows/x64/jdk-6u43-windows-x64.exe)】，一直 下一步 到完成即可（无需修改安装路径）
+- 01.　安装JDK环境【[jdk-8u191-windows-x64.exe](https://github.com/lyy289065406/environment/tree/master/environment/java/JDK/windows/x64/jdk-8u191-windows-x64.exe)】，一直 下一步 到完成即可（无需修改安装路径）
 - 02.　解压并运行【AccountMgr.exe】
 - 03.　首次使用时，输入任意帐密（不要忘记哦）后，点击【注册】
 - 04.　注册成功或再次使用时，输入所注册的帐密后，点击【登陆】
