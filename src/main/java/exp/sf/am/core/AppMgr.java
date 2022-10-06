@@ -1,6 +1,6 @@
 package exp.sf.am.core;
 
-import exp.libs.warp.ui.SwingUtils;
+import exp.libs.ui.SwingUtils;
 
 /**
  * <PRE>

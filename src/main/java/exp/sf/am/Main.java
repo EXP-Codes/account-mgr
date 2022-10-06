@@ -1,8 +1,8 @@
 package exp.sf.am;
 
+import exp.libs.ui.BeautyEyeUtils;
 import org.jb2011.lnf.beautyeye.BeautyEyeLNFHelper.FrameBorderStyle;
 
-import exp.libs.warp.ui.BeautyEyeUtils;
 import exp.sf.am.core.AppMgr;
 
 /**

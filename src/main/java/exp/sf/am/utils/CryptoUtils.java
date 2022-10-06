@@ -18,16 +18,16 @@ public class CryptoUtils {
 			"BD2D613A170463A35B113684C4606911C29A8200F46B2224126EBC4EE6F3BB6D";
 	
 	private final static String PW_KEY = new String(BODHUtils.toBytes(
-					exp.libs.utils.encode.CryptoUtils.deDES(_PW_KEY)));
+					exp.libs.encode.CryptoUtils.deDES(_PW_KEY)));
 	
 	private CryptoUtils() {}
 	
 	public static String encode(String str) {
-		return exp.libs.utils.encode.CryptoUtils.toDES(str, PW_KEY);
+		return exp.libs.encode.CryptoUtils.toDES(str, PW_KEY);
 	}
 	
 	public static String decode(String str) {
-		return exp.libs.utils.encode.CryptoUtils.deDES(str, PW_KEY);
+		return exp.libs.encode.CryptoUtils.deDES(str, PW_KEY);
 	}
 	
 }

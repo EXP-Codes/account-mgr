@@ -3,7 +3,7 @@ package exp.sf.am.bean;
 import java.sql.Connection;
 import java.util.List;
 
-import exp.libs.warp.db.sql.DBUtils;
+import exp.libs.db.sql.DBUtils;
 import exp.sf.am.utils.CryptoUtils;
 
 /**
