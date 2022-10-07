@@ -31,7 +31,7 @@ class DBMgr {
 
 	private final static String ENV_DB_SCRIPT = "/exp/sf/am/bean/AM-DB.sql";
 	
-	private final static String ENV_DB_DIR = "./lib/";
+	private final static String ENV_DB_DIR = "./libs/";
 	
 	private final static String ENV_DB_NAME = ".AM";
 	
