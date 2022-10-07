@@ -25,7 +25,7 @@
 		<release.dir>${project.build.directory}/${project.artifactId}-${project.version}</release.dir>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<jdk.version>1.8</jdk.version>
-		<exp.libs.version>2.2.0</exp.libs.version>
+		<exp.libs.version>2.3.0-SNAPSHOT</exp.libs.version>
 		<rpp.plugin.version>2.0.0</rpp.plugin.version>
 		<ut.version>5.9.1</ut.version>
 	</properties>
@@ -235,6 +235,14 @@
 						<goals>
 							<goal>run</goal>
 						</goals>
+						<configuration>
+							<target>
+								<echo>拷贝资源文件</echo>
+								<copy file="res/AccountMgr.exe" tofile="${release.dir}/AccountMgr.exe" />
+								<echo>拷贝说明文档</echo>
+								<copy file="README.txt" tofile="${release.dir}/README.txt" />
+							</target>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
