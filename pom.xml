@@ -3,16 +3,19 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<!--项目基本信息(必填)-->
-	<groupId>com.exp-blog</groupId>
-	<artifactId>account-mgr</artifactId>
-	<version>2.0</version>
-	<packaging>jar</packaging>
+	<licenses>
+		<license>
+			<name>The Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+		</license>
+	</licenses>
 
-	<name>account-mgr</name>
-	<description>账密管理器：管理个人帐密信息（信息加密、不联网）</description>
-	<url>https://github.com/lyy289065406/account-mgr</url>
-	<inceptionYear>2017-07-11</inceptionYear>
+	<developers>
+		<developer>
+			<name>EXP</name>
+			<email>exp.lqb@foxmail.com</email>
+		</developer>
+	</developers>
 
 	<scm>
 		<connection>scm:git:https://github.com/lyy289065406/account-mgr</connection>
@@ -20,7 +23,16 @@
 		<url>scm:git:https://github.com/lyy289065406/account-mgr</url>
 	</scm>
 
-	<!-- 变量定义 -->
+	<!-- 发布到 sonatype 中央仓库要求必须有这 3 个属性 -->
+	<name>account-mgr</name>
+	<description>账密管理器：管理个人帐密信息（信息加密、不联网）</description>
+	<url>https://github.com/lyy289065406/account-mgr</url>
+
+	<groupId>com.exp-blog</groupId>
+	<artifactId>account-mgr</artifactId>
+	<version>2.0.0</version>
+	<packaging>jar</packaging>
+
 	<properties>
 		<release.dir>${project.build.directory}/${project.artifactId}-${project.version}</release.dir>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,7 +42,6 @@
 		<ut.version>5.9.1</ut.version>
 	</properties>
 
-	<!-- 项目依赖 -->
 	<dependencies>
 	
 		<!-- 经验库 -->
@@ -98,6 +109,47 @@
 					<target>${jdk.version}</target>
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
+			</plugin>
+
+			<!-- 生成源码 jar 包 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.2.1</version>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- 生成 javadoc 包 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.3.2</version>
+				<configuration>
+					<charset>${project.build.sourceEncoding}</charset>
+					<encoding>${project.build.sourceEncoding}</encoding>
+					<docencoding>${project.build.sourceEncoding}</docencoding>
+
+					<!-- 从 JDK8 开始, Javadoc中 添加了 doclint, 目的是旨在获得符合 W3C HTML 4.01 标准规范的 HTML 文档 -->
+					<!-- 简而言之 Javadoc 不允许出现 html 相关的元素, 若旧注释含有这些元素又不想修改, 只能关闭 doclint -->
+					<additionalOptions>
+						<additionalOption>-Xdoclint:none</additionalOption>
+					</additionalOptions>
+				</configuration>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 
 			<!-- 混淆打包插件 -->
