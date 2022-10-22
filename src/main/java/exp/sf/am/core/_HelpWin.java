@@ -18,7 +18,7 @@ import javax.swing.JToolTip;
  * <br/><B>SUPPORT : </B> <a href="http://www.exp-blog.com" target="_blank">www.exp-blog.com</a> 
  * @version   2017-07-11
  * @author    EXP: 272629724@qq.com
- * @since     jdk版本：jdk1.6
+ * @since     jdk版本：jdk1.8
  */
 public class _HelpWin extends PopChildWindow {
 
