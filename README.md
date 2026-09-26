@@ -1,3 +1,15 @@
+> **项目已归档，停止维护。**
+>
+> 后续请使用新项目 **[Epassword](https://github.com/EXP-Tools/Epassword)**：基于 Electron 的本地密码管理器，支持 Windows / macOS、加密 Excel 密码库、OTP、Chrome 自动填充及导入导出。
+>
+> **[下载最新版本](https://github.com/EXP-Tools/Epassword/releases/latest)** · **[用户使用手册](https://github.com/EXP-Tools/Epassword/blob/master/docs/USER-GUIDE.md)**
+>
+> **Archived / no longer maintained.** Please use **[Epassword](https://github.com/EXP-Tools/Epassword)** for continued development. This repository is retained for historical reference. The two applications use different storage formats; existing account-mgr data is not automatically migrated.
+>
+> 本仓库仅保留历史代码与说明。两个项目的存储格式不同，旧数据不会自动迁移，请先保留原始数据与备份。
+
+---
+
 # Account-Manager
 > 帐密管理器
 
